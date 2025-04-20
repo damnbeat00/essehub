@@ -272,6 +272,30 @@ margin-top: 10px; /* Adds clear spacing of at least 20px */
   top: 20px;
   right: 23px; /* Adjust horizontally as needed */
 }
+@media (max-width: 576px) {
+  /* I-match width at alignment ng Birthdate at Phone sa Email */
+  .row.mb-3:has(#birthdate):has(#phone) {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .row.mb-3:has(#birthdate):has(#phone) .col.input-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100%;
+  }
+
+  /* Pantayin ang padding at position ng labels gaya ng Email */
+  .row.mb-3:has(#birthdate):has(#phone) .input-container label {
+    left: 10px !important; /* eksaktong left position ng email label */
+  }
+
+  /* spacing sa pagitan ng dalawang input */
+  .row.mb-3:has(#birthdate):has(#phone) .col.input-container:last-child {
+    margin-top: 15px;
+  }
+}
 
 
       
@@ -478,6 +502,8 @@ margin-top: 10px; /* Adds clear spacing of at least 20px */
             🔒 Secure Payment via SSL encryption
         </div>
     </div>
+    
+    
     </form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
